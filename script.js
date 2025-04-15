@@ -16,6 +16,14 @@ document.addEventListener("click", (event) => {
     }
 });
 
+// Add click event listeners to all nav links
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        // Close mobile menu when a link is clicked
+        document.body.classList.remove('show-mobile-menu');
+    });
+});
+
 // Initialize swiper 
 const swiper = new Swiper('.slider-wrapper', {
   loop: true,
